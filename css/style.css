@@ -1,0 +1,43 @@
+/* Charte propre au jeu : ivoire, bordeaux, or. */
+:root {
+    --fond: #f8f3e9;
+    --encre: #332822;
+    --bordeaux: #742e40;
+    --or: #b48a44;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--fond); color: var(--encre); font-family: Arial, sans-serif; line-height: 1.65; }
+header { max-width: 1000px; margin: auto; padding: 22px 28px; display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--or); }
+header a { text-decoration: none; font-weight: bold; letter-spacing: .12em; }
+header span { font-size: .9rem; }
+main { max-width: 800px; margin: 45px auto; padding: 0 28px; }
+h1, h2 { font-family: Georgia, serif; line-height: 1.15; font-weight: normal; }
+h1 { font-size: clamp(2rem, 6vw, 3.6rem); margin: 12px 0 20px; }
+h2 { font-size: 1.4rem; }
+a { color: var(--bordeaux); }
+.eyebrow { font-size: .8rem; letter-spacing: .16em; font-weight: bold; color: var(--bordeaux); }
+.lead { font-size: 1.2rem; }
+.intro { border-top: 1px solid #d8c9af; margin-top: 30px; padding-top: 12px; }
+.start { font-size: 1.5rem; margin-top: 30px; }
+.start a { font-weight: bold; text-underline-offset: 6px; }
+.previous { border-bottom: 1px solid #d8c9af; padding-bottom: 20px; margin-bottom: 30px; text-align: center; }
+.full-art { display: block; max-width: 100%; max-height: 240px; width: auto; height: auto; margin: auto; object-fit: contain; }
+.clues { display: flex; justify-content: center; gap: 30px; margin: 25px 0; }
+figure { margin: 0; text-align: center; }
+.clue { width: 100px; height: 100px; object-fit: contain; border: 2px solid var(--or); background: white; padding: 3px; }
+figcaption { font-size: .85rem; margin-top: 6px; }
+label { display: block; font-weight: bold; margin-bottom: 8px; }
+.answer { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; border: 1px solid #aa978a; padding: 12px; border-radius: 4px; font: inherit; }
+button, .button { display: inline-block; background: var(--bordeaux); color: white; padding: 12px 20px; border: 0; border-radius: 4px; font: inherit; text-decoration: none; cursor: pointer; }
+button:disabled { opacity: .6; cursor: default; }
+:focus-visible { outline: 3px solid var(--or); outline-offset: 4px; }
+.error, .image-error { color: #922e2e; }
+.success { color: #28613c; font-weight: bold; }
+footer { text-align: center; color: #756456; margin: 50px 20px 25px; font-size: .85rem; }
+@media (max-width: 480px) {
+    header { flex-direction: column; gap: 2px; }
+    main { margin-top: 28px; padding: 0 20px; }
+    .answer { flex-direction: column; }
+}

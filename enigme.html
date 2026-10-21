@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Énigme · Pâques 2027</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/oeuvres-data.js" defer></script>
+  <script src="js/oeuvres-game.js" defer></script>
+  <script src="js/oeuvres-page.js" defer></script>
+</head>
+<body>
+  <header><a href="index.html">PÂQUES 2027</a><span>Une promenade dans l’art</span></header>
+  <main>
+    <noscript>Activez JavaScript pour jouer.</noscript>
+    <section id="precedente" class="previous" hidden>
+      <p class="eyebrow">L’ŒUVRE PRÉCÉDENTE</p>
+      <img id="oeuvre-precedente" class="full-art" alt="">
+      <h2 id="titre-precedent"></h2>
+    </section>
+    <section id="jeu" hidden>
+      <p id="progression" class="eyebrow"></p>
+      <h1>Quelle est cette œuvre ?</h1>
+      <p id="artiste" class="lead"></p>
+      <div class="clues">
+        <figure><img id="piece" class="clue" alt="Détail de l’œuvre à reconnaître"><figcaption>Le morceau</figcaption></figure>
+        <figure><img id="indice" class="clue" alt="Indice visuel"><figcaption>L’indice</figcaption></figure>
+      </div>
+      <form id="reponse-form">
+        <label for="reponse">Le nom de l’œuvre</label>
+        <div class="answer"><input id="reponse" name="reponse" type="text" autocomplete="off" required><button type="submit">Valider</button></div>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+      <a id="suivant" class="button" hidden>Continuer</a>
+    </section>
+    <section id="fin" hidden><h1 id="fin-titre"></h1><p id="fin-texte" class="lead"></p><a href="index.html">Retour à l’accueil</a></section>
+</main>
+  <footer>Le musée des énigmes</footer>
+</body>
+</html>
