@@ -47,4 +47,5 @@ window.OEUVRES = [
         "titre": "Guernica",
         "artiste": "Pablo Picasso"
     }
+    
 ];
