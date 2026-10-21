@@ -35,6 +35,7 @@
     if (precedente) {
         $("precedente").hidden = false;
         $("titre-precedent").textContent = precedente.titre;
+        $("artiste-precedent").textContent = precedente.artiste;
         afficherImage("oeuvre-precedente", "oeuvre", precedente.numero, precedente.titre);
     }
 
@@ -51,7 +52,6 @@
     document.title = `Énigme ${numero} · Pâques 2027`;
     $("jeu").hidden = false;
     $("progression").textContent = `ÉNIGME ${String(numero).padStart(2, "0")} / ${total}`;
-    $("artiste").textContent = oeuvre.artiste;
     afficherImage("piece", "piece", numero, "Détail de l’œuvre à reconnaître");
     afficherImage("indice", "indice", numero, "Indice visuel de cette énigme");
     $("reponse-form").addEventListener("submit", event => {
