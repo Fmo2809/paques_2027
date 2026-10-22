@@ -10,8 +10,10 @@ window.OeuvresGame = {
             .replace(/\s+/g, " ")
             .trim();
     },
-    estCorrecte(saisie, titre) {
-        return this.normaliser(saisie) === this.normaliser(titre);
+    estCorrecte(saisie, titre, alternatives = []) {
+        return [titre, ...alternatives].some(solution =>
+            this.normaliser(saisie) === this.normaliser(solution)
+        );
     },
     image(type, numero) {
         const config = window.OEUVRES_CONFIG;
